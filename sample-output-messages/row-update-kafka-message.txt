@@ -1,0 +1,191 @@
+{
+    "payload": {
+        "after": {
+            "email": "first.last@gmail.com",
+            "first_name": "Naren4",
+            "id": 1,
+            "last_name": "Last"
+        },
+        "before": null,
+        "op": "u",
+        "source": {
+            "connector": "postgresql",
+            "db": "postgres",
+            "lsn": 23885768,
+            "name": "debezium-demo",
+            "schema": "public",
+            "snapshot": "false",
+            "table": "customers",
+            "ts_ms": 1627936639461,
+            "txId": 497,
+            "version": "1.4.2.Final",
+            "xmin": null
+        },
+        "transaction": null,
+        "ts_ms": 1627936639598
+    },
+    "schema": {
+        "fields": [
+            {
+                "field": "before",
+                "fields": [
+                    {
+                        "field": "id",
+                        "optional": false,
+                        "type": "int32"
+                    },
+                    {
+                        "field": "first_name",
+                        "optional": false,
+                        "type": "string"
+                    },
+                    {
+                        "field": "last_name",
+                        "optional": false,
+                        "type": "string"
+                    },
+                    {
+                        "field": "email",
+                        "optional": false,
+                        "type": "string"
+                    }
+                ],
+                "name": "debezium_demo.public.customers.Value",
+                "optional": true,
+                "type": "struct"
+            },
+            {
+                "field": "after",
+                "fields": [
+                    {
+                        "field": "id",
+                        "optional": false,
+                        "type": "int32"
+                    },
+                    {
+                        "field": "first_name",
+                        "optional": false,
+                        "type": "string"
+                    },
+                    {
+                        "field": "last_name",
+                        "optional": false,
+                        "type": "string"
+                    },
+                    {
+                        "field": "email",
+                        "optional": false,
+                        "type": "string"
+                    }
+                ],
+                "name": "debezium_demo.public.customers.Value",
+                "optional": true,
+                "type": "struct"
+            },
+            {
+                "field": "source",
+                "fields": [
+                    {
+                        "field": "version",
+                        "optional": false,
+                        "type": "string"
+                    },
+                    {
+                        "field": "connector",
+                        "optional": false,
+                        "type": "string"
+                    },
+                    {
+                        "field": "name",
+                        "optional": false,
+                        "type": "string"
+                    },
+                    {
+                        "field": "ts_ms",
+                        "optional": false,
+                        "type": "int64"
+                    },
+                    {
+                        "default": "false",
+                        "field": "snapshot",
+                        "name": "io.debezium.data.Enum",
+                        "optional": true,
+                        "parameters": {
+                            "allowed": "true,last,false"
+                        },
+                        "type": "string",
+                        "version": 1
+                    },
+                    {
+                        "field": "db",
+                        "optional": false,
+                        "type": "string"
+                    },
+                    {
+                        "field": "schema",
+                        "optional": false,
+                        "type": "string"
+                    },
+                    {
+                        "field": "table",
+                        "optional": false,
+                        "type": "string"
+                    },
+                    {
+                        "field": "txId",
+                        "optional": true,
+                        "type": "int64"
+                    },
+                    {
+                        "field": "lsn",
+                        "optional": true,
+                        "type": "int64"
+                    },
+                    {
+                        "field": "xmin",
+                        "optional": true,
+                        "type": "int64"
+                    }
+                ],
+                "name": "io.debezium.connector.postgresql.Source",
+                "optional": false,
+                "type": "struct"
+            },
+            {
+                "field": "op",
+                "optional": false,
+                "type": "string"
+            },
+            {
+                "field": "ts_ms",
+                "optional": true,
+                "type": "int64"
+            },
+            {
+                "field": "transaction",
+                "fields": [
+                    {
+                        "field": "id",
+                        "optional": false,
+                        "type": "string"
+                    },
+                    {
+                        "field": "total_order",
+                        "optional": false,
+                        "type": "int64"
+                    },
+                    {
+                        "field": "data_collection_order",
+                        "optional": false,
+                        "type": "int64"
+                    }
+                ],
+                "optional": true,
+                "type": "struct"
+            }
+        ],
+        "name": "debezium_demo.public.customers.Envelope",
+        "optional": false,
+        "type": "struct"
+    }
+}
