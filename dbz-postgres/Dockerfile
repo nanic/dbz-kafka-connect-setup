@@ -1,4 +1,4 @@
-FROM debezium/postgres:13
+FROM --platform=linux/arm debezium/postgres:13
 
 LABEL maintainer="Naren Ravilla"
 
